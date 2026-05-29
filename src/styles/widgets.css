@@ -243,3 +243,12 @@
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 480px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .fun-fact-box {
+    grid-column: span 1;
+  }
+}

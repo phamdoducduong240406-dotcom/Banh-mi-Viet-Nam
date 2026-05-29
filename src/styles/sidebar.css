@@ -200,3 +200,22 @@
     min-height: 250px;
   }
 }
+
+@media (max-width: 480px) {
+  .detail-left-col {
+    padding: 1rem;
+  }
+  .detail-image-container {
+    min-height: 200px;
+  }
+  .detail-title {
+    font-size: 1.8rem;
+  }
+  .sidebar-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .detail-right-col {
+    padding: 1rem;
+  }
+}

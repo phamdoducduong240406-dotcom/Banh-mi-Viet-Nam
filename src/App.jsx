@@ -89,15 +89,15 @@ function App() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
-                style={{ display: 'flex', width: '100%', gap: '2rem' }}
+                className="map-layout-wrapper"
               >
                 {/* CỘT TRÁI: THỐNG KÊ (flex: 3) */}
-                <div style={{ flex: 3, display: 'flex', alignItems: 'center' }}>
+                <div className="map-layout-left">
                   <QuickStats />
                 </div>
                 
                 {/* CỘT GIỮA: MAP & SEARCH (flex: 6) */}
-                <div style={{ flex: 6, display: 'flex', flexDirection: 'column' }}>
+                <div className="map-layout-center">
                   <SearchBar data={banhMiData} onSelect={handleProvinceClick} />
                   <div style={{ flex: 1 }}>
                     <VietnamMap 
@@ -109,7 +109,7 @@ function App() {
                 </div>
 
                 {/* CỘT PHẢI: GỢI Ý (flex: 3) */}
-                <div style={{ flex: 3, display: 'flex', alignItems: 'center' }}>
+                <div className="map-layout-right">
                   <RandomSuggest allData={banhMiData} onSelect={handleProvinceClick} />
                 </div>
               </motion.div>
