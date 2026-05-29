@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hcm",
+    "provinceName": "TP. Hồ Chí Minh",
+    "banhMiName": "Bánh Mì Sài Gòn",
+    "ingredients": ["Bơ dầu trứng", "Chả lụa", "Pate"],
+    "description": "Bánh mì Sài Gòn mang đặc trưng vỏ mỏng, giòn rụm và phần ruột đặc xốp. Trải qua hàng thập kỷ, ổ bánh mì đã trở thành biểu tượng ẩm thực đường phố không thể thiếu của người dân Nam Bộ. Sự kết hợp hoàn hảo giữa lớp bơ dầu trứng béo ngậy làm thủ công, chả lụa thơm lừng, thịt nguội thái mỏng và pate gan heo đậm đà, kết hợp cùng dưa leo, ngò rí và chút đồ chua tạo nên một bản giao hưởng hương vị tuyệt hảo, đánh thức mọi giác quan ngay từ miếng cắn đầu tiên.",
+    "image": "/images/hcm.webp",
+    "coordinates": { "x": 55, "y": 80 }
+  },
+  {
+    "id": "hn",
+    "provinceName": "TP. Hà Nội",
+    "banhMiName": "Bánh Mì Dân Tổ",
+    "ingredients": ["Pate", "Trứng", "Hành phi"],
+    "description": "Đúng như tên gọi, Bánh mì Dân Tổ ban đầu phục vụ cho những người lao động về đêm ở ngã ba Cao Bá Quát, Hà Nội, nhưng nay đã trở thành hiện tượng ẩm thực khiến giới trẻ săn lùng. Điểm độc đáo nhất nằm ở phần nhân 'hỗn mang' được xào chung trên một chiếc chảo lớn: pate, trứng, hành tây, bò khô, chả, lạp xưởng hòa quyện vào nhau tạo thành một hỗn hợp sền sệt, béo ngậy. Khi kẹp vào ổ bánh mì nóng giòn, nó mang đến một trải nghiệm mềm mại, đậm đà, thơm lức mùi hành phi và tiêu đen khó cưỡng.",
+    "image": "/images/hn.webp",
+    "coordinates": { "x": 42, "y": 20 }
+  },
+  {
+    "id": "hp",
+    "provinceName": "TP. Hải Phòng",
+    "banhMiName": "Bánh Mì Que",
+    "ingredients": ["Pate cột đèn", "Chí chương"],
+    "description": "Chỉ bằng đúng hai ngón tay với nhân pate gan béo ngậy đặc trưng, bánh mì que (hay còn gọi là bánh mì cay) là thức quà ăn vặt trứ danh của đất Cảng. Bí quyết nằm ở lớp pate Cột Đèn thơm lừng, mỡ màng được phết đều bên trong, sau đó nướng giòn rụm trên than hồng. Cắn một miếng bánh mì que, quệt đẫm tương ớt Chí Chương cay nồng đặc sản Hải Phòng, vị cay xé lưỡi kết hợp với vị béo ngậy tạo nên sức hấp dẫn không thể chối từ, khiến ai đã ăn là phải gọi cả chục cái mới đã thèm.",
+    "image": "/images/hp.webp",
+    "coordinates": { "x": 48, "y": 22 }
+  },
+  {
+    "id": "hue",
+    "provinceName": "TP. Thừa Thiên Huế",
+    "banhMiName": "Bánh Mì Huế",
+    "ingredients": ["Ớt xào", "Pate", "Thịt quay"],
+    "description": "Bánh mì Huế mang đậm cốt cách của con người vùng đất Cố Đô: tinh tế, nhỏ nhắn nhưng hương vị lại vô cùng sắc sảo và sâu cay. Ổ bánh mì đặc ruột, nướng giòn tan được nhồi đầy phần nhân thịt quay thái mỏng, lớp da heo quay giòn rụm và pate bùi béo. Nhưng linh hồn thực sự của món ăn này chính là nước chan đậm đà và đặc biệt là ớt rim xào cay xé lưỡi, một nét văn hóa ăn cay không thể lẫn đi đâu được của người dân Thừa Thiên, tạo nên một dư vị ấm nồng nhớ mãi.",
+    "image": "/images/hue.webp",
+    "coordinates": { "x": 68, "y": 48 }
+  },
+  {
+    "id": "ha",
+    "provinceName": "TP. Hội An",
+    "banhMiName": "Bánh Mì Hội An",
+    "ingredients": ["Lạp xưởng", "Pate", "Xá xíu"],
+    "description": "Từng được cố đầu bếp huyền thoại Anthony Bourdain ngợi ca là 'Ổ bánh mì ngon nhất thế giới', bánh mì Hội An sở hữu ổ bánh hình thoi nhọn hai đầu đặc trưng, luôn được giữ ấm giòn. Sự tinh túy đến từ sự kết hợp của hàng chục loại nguyên liệu: thịt xá xíu mềm ngọt, lạp xưởng, chả, pate tự làm, bơ béo, và vô vàn các loại rau thơm tươi rói. Điểm nhấn làm nên sự khác biệt chính là phần nước sốt gia truyền bí mật được chan đẫm, thấm vào từng thớ thịt và ruột bánh, tạo nên tổng thể hoàn mỹ.",
+    "image": "/images/ha.webp",
+    "coordinates": { "x": 72, "y": 55 }
+  }
+]

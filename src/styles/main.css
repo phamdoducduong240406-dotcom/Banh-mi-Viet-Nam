@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+@font-face {
+  font-family: 'Classique Saigon';
+  src: url('/fonts/ClassiqueSaigon-Full.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #c8102e; /* Vietnam Red */
+  --primary-dark: #9a0c22;
+  --accent: #fcd116; /* Vietnam Yellow */
+  --bg-app: #f4f6f8;
+  --bg-card: rgba(255, 255, 255, 0.7); /* Glassmorphism light */
+  --text-main: #222222;
+  --text-muted: #666666;
+  --text-light: #999999;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 5px 15px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --white: #ffffff;
+  --shadow-3d: -15px 15px 25px rgba(0,0,0,0.15), -5px 5px 10px rgba(0,0,0,0.08);
+  --shadow-map: -20px 20px 30px rgba(0,0,0,0.2), inset -5px 5px 10px rgba(255,255,255,0.5);
+  --shadow-marker: -5px 5px 10px rgba(0,0,0,0.3);
+  --grid-color: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+  --bg-app: #121212; /* Titanium Gray / Vercel style */
+  --bg-card: rgba(30, 30, 30, 0.6); /* Glassmorphism dark */
+  --text-main: #f0f0f0;
+  --text-muted: #a0a0a0;
+  --text-light: #707070;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 5px 15px rgba(0,0,0,0.4);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
+  --grid-color: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: var(--bg-app);
+  /* Grid pattern texture for depth */
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center center;
+  color: var(--text-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Be Vietnam Pro', sans-serif; 
+}
+
+/* PREMIUM BUTTON STYLES */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-family: 'Classique Saigon', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(200, 16, 46, 0.3), inset 0 2px 0 rgba(255,255,255,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(200, 16, 46, 0.4), inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+.btn-primary:hover::after {
+  left: 150%;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(200, 16, 46, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-family: 'Classique Saigon', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(200, 16, 46, 0.3);
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+  position: relative;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+}
+
+.nav-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 1.05rem;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-separator {
+  color: #ccc;
+}
+
+/* MAIN LAYOUT */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .main-wrapper {
+    padding: 2rem 4rem;
+  }
+}
+
+.left-panel {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-light);
+}
+
+.footer-socials svg {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-socials svg:hover {
+  color: var(--text-main);
+}
+
+/* UTILITIES */
+.card-3d {
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-3d);
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* HERO SECTION */
+.hero-section {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.hero-parallax-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/group.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay-text {
+  position: absolute;
+  bottom: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@media (max-width: 1024px) {
+  .main-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .left-panel {
+    flex: none;
+    width: 100%;
+    order: 2; /* Sidebar below map on mobile */
+  }
+  .right-panel {
+    order: 1;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
+
+/* TEXT SELECTION */
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* BUTTON SHINE EFFECT */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: all 0.5s ease;
+}
+.btn-primary:hover::after {
+  left: 150%;
+}
