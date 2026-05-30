@@ -37,7 +37,7 @@ const QuickStats = () => {
       <div className="bento-grid">
         <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} scale={1.05} transitionSpeed={2500}>
           <div className="stat-box" style={{ height: '100%' }}>
-            <span className="stat-number">63+</span>
+            <span className="stat-number">34+</span>
             <span className="stat-label">Đặc sản bánh mì</span>
           </div>
         </Tilt>

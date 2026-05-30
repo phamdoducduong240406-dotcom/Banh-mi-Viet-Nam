@@ -41,7 +41,7 @@ const SearchBar = ({ data, onSelect }) => {
         <input 
           type="text" 
           className="search-input" 
-          placeholder="Tìm kiếm tỉnh thành hoặc loại bánh mì bạn yêu thích..." 
+          placeholder="Tìm kiếm loại bánh mì bạn yêu thích..." 
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);

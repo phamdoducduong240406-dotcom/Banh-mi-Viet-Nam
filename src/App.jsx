@@ -7,6 +7,7 @@ import QuickStats from './components/Widgets/QuickStats';
 import RandomSuggest from './components/Widgets/RandomSuggest';
 import SearchBar from './components/Widgets/SearchBar';
 import Preloader from './components/Layout/Preloader';
+import IntroOverlay from './components/Widgets/IntroOverlay';
 import banhMiData from './data/banh-mi-data.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import './styles/main.css';
@@ -14,8 +15,8 @@ import './styles/widgets.css';
 
 function App() {
   const [activeProvinceId, setActiveProvinceId] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [showIntro, setShowIntro] = useState(false);
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,14 +24,6 @@ function App() {
     }, 1800);
     return () => clearTimeout(timer);
   }, []);
-
-  React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  }, [isDarkMode]);
 
   const playCrunchSound = () => {
     // Sound effect URL
@@ -56,13 +49,17 @@ function App() {
         {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
       
+      <AnimatePresence>
+        {showIntro && <IntroOverlay onClose={() => setShowIntro(false)} />}
+      </AnimatePresence>
+      
       <div className="app-container">
         {/* KHU VỰC ẢNH NHÓM (HERO SECTION) */}
         <div className="hero-section">
           <div className="hero-parallax-bg"></div>
         </div>
 
-        <Navbar toggleDarkMode={() => setIsDarkMode(!isDarkMode)} isDarkMode={isDarkMode} />
+        <Navbar onIntroClick={() => setShowIntro(true)} />
         
         <main className="main-wrapper">
           <AnimatePresence mode="wait">
