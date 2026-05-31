@@ -56,7 +56,7 @@ function App() {
       <div className="app-container">
         {/* KHU VỰC ẢNH NHÓM (HERO SECTION) */}
         <div className="hero-section">
-          <div className="hero-parallax-bg"></div>
+          <img src="/images/group.jpg" className="w-full h-auto object-contain" alt="Team" style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
         </div>
 
         <Navbar onIntroClick={() => setShowIntro(true)} />
