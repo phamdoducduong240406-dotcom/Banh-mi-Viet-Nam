@@ -32,7 +32,7 @@ const IntroOverlay = ({ onClose }) => {
       {/* Nội dung bên dưới (Ảnh giới thiệu) */}
       <div className="intro-content">
         <motion.img 
-          src="/images/gioithieu.jpg" 
+          src="/images/gioithieu.png" 
           alt="Giới thiệu" 
           className="intro-image" 
           initial={{ scale: 0.8, opacity: 0 }}
