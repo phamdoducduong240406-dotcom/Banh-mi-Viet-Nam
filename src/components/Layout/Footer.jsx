@@ -8,7 +8,7 @@ const Footer = () => {
         <span>TW</span>
         <span>YT</span>
       </div>
-      <div>&copy; 2026 Copyright Đức Dương</div>
+      <div>&copy; 2026 Copyright Bánh Mì Không?</div>
     </footer>
   );
 };
